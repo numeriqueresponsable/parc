@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr"> 
+<head> 
+<meta charset="utf-8" />
+<Title> Noel recapitulatif   </title>
+</head> 
+<style> 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+table, th , td, tr { 
+	border: 1px solid   ;
+	border-color : grey ;
+	padding : 5px ; 
+	margin : 5px ;
+	margin : auto ; 
+	}
+
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+}
+div.lightbox {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+div.lightbox:target {
+  display: table;
+}
+
+div.lightbox figure {
+  display: table-cell;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+div.lightbox figure figcaption {
+  display: block;
+  margin: auto;
+  padding: 8px;
+  background-color: #ddbbff;
+  height: 250px;
+  position: relative;
+  overflow: auto;
+  border: 1px #000000 solid;
+  border-radius: 10px;
+  text-align: justify;
+  font-size: 14px;
+}
+
+div.lightbox figure .closemsg {
+  display: block;
+  margin: auto;
+  height: 0;
+  overflow: visible;
+  text-align: right;
+  z-index: 2;
+  cursor: default;
+}
+
+div.lightbox figure .closemsg, div.lightbox figure figcaption {
+  width: 300px;
+}
+
+.closemsg::after {
+  content: "\00D7";
+  display: inline-block;
+  position: relative;
+  right: -20px;
+  top: -10px;
+  z-index: 3;
+  color: #ffffff;
+  border: 1px #ffffff solid;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  line-height: 18px;
+  text-align: center;
+  margin: 0;
+  background-color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.closemsg::before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.85;
+}
+.entete { 
+   width:400px;
+   margin : auto ; 
+   padding :10px ;
+   border:2px solid #000;
+   border-radius:8px ;
+   background-color : lightgrey ; 
+   text-align:center; 
+    }
+.tableau  { 
+   border-radius:2px ;
+   padding :5px ;
+   border:1px solid ; 
+   text-align:center; 
+    }
+
+
+
+
+	
+
+
+</style> 
+<script type="text/javascript">            
+ function ShowHide(elm){
+   var element = document.getElementById(elm);
+   if( element.style.display == 'none'){
+     element.style.display = 'block';
+   }else{
+     element.style.display = 'none';
+   }
+ }
+
+function ToggleAll() { 
+	normas=document.getElementsByName("norma") ; 
+	normas.forEach( function ( currentValue , currentIndex , listObj ) { 
+			   console.log(currentValue.id + ', ' + currentIndex + ', ' + this);
+			   ShowHide(currentValue.id) ; 
+			},
+	'myThisArg'
+		);
+	}
+
+
+ // Calculette Carbonne développé dans le cadre de l'activite Numerique Resposable de GRDF 
+ // Auteur Dominique Desbois
+ // novembre 2021  
+
+// constantes : 
+	
+
+ 
+	document.addEventListener('DOMContentLoaded', (event) => {
+		console.log('DOM fully loaded and parsed');
+		normas=document.getElementsByName("norma") ; 
+		normas.forEach( function ( currentValue , currentIndex , listObj ) { 
+			   console.log(currentValue.id + ', ' + currentIndex + ', ' + this);
+  },
+  'myThisArg'
+);
+			
+});
+    
+</script>
+<body>
+
+
+<table class="table" >
+    <thead>
+        <tr>
+			<td>Année</td>
+            <td>Thème </td>
+			<td>gagnant</td>
+			<td>où</td>
+			<td>Cadeau gagnant </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2021</td>
+            <td>Graine </td>
+			<td>Dominique</td>
+			<td>St Ouen</td>
+			<td>papier fleuri avec graines </td>
+		</tr>
+		<tr>
+		  <td>2020</td>
+            <td>Anagramme </td>
+			<td>Catherine</td>
+			<td>quai de l'Oise </td>
+			<td>Textes  </td>
+		</tr>
+		<tr>
+		  <td>2019</td>
+            <td>Recyclage  </td>
+			<td>Djamel & Dominique </td>
+			<td>quai de la Garonne</td>
+			<td>pochette en tissus / vers de terre </td>
+		</tr>
+		<tr>
+		  <td>2018</td>
+            <td>Noir et blanc </td>
+			<td>Gilles</td>
+			<td>quai de l'Oise </td>
+			<td>Tickets PMU noirs & blancs  </td>
+		</tr>
+		<tr>
+		  <td>2017</td>
+            <td>Belles bulles</td>
+			<td>Luc </td>
+			<td>rue des Lilas </td>
+			<td>video avec bulles de savon</td>
+		</tr>
+		<tr>
+		  <td>2016</td>
+            <td>Saucisse </td>
+			<td>Manuel</td>
+			<td>Catifet </td>
+			<td>Chien avec des verrres  </td>
+		</tr>
+		<tr>
+		  <td>2015</td>
+            <td>Plumes et poils </td>
+			<td>Dominique </td>
+			<td> ? </td>
+			<td>écharpe en fourrure   </td>
+		</tr>
+				<tr>
+		  <td>2014</td>
+            <td>  ? </td>
+			<td>Catherine</td>
+			<td> ? </td>
+			<td> ?  </td>
+		</tr>
+				<tr>
+		  <td>2013</td>
+            <td>Epices </td>
+			<td>Manuel </td>
+			<td>St Ouen  </td>
+			<td> vase pistolet  </td>
+		</tr>
+				<tr>
+		  <td>2012</td>
+            <td>Fleurs </td>
+			<td>Djamel </td>
+			<td>St Ouen </td>
+			<td>Miroirs </td>
+		</tr>
+				<tr>
+		  <td>2011</td>
+            <td> ?  </td>
+			<td> Catherine</td>
+			<td> ?  </td>
+			<td> ?  </td>
+		</tr>
+				<tr>
+		  <td>2010</td>
+            <td>Maori  </td>
+			<td>Dominique </td>
+			<td>St Ouen  </td>
+			<td>Cadre avec images Maori </td>
+		</tr>
+		<tr>
+		  <td> ? </td>
+            <td>Bar  </td>
+			<td>Dominique </td>
+			<td> ?  </td>
+			<td>Glacon barre d'eau  </td>
+		</tr>
+				<tr>
+		  <td>? </td>
+            <td> ?  </td>
+			<td>Luc </td>
+			<td> ?  </td>
+			<td>Abats ( viande )   </td>
+
+    </tbody>
+</table>   
+
+
+
+</body>
+</html>
+
+
