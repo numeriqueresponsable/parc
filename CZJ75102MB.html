@@ -4846,4 +4846,5 @@ try {
 var eventDetail=event&&event.detail?event.detail:{},linkName="no-linkname-given",linkType="o",screenName="not-defined";try{linkName=eventDetail.secondParam.link_name||eventDetail.secondParam.linkname}catch(e){}try{screenName=eventDetail.secondParam.screen_name}catch(e){}try{/chat/i.test(linkName)&&(s.prop29=linkName,s.eVar75=s.pageName,s.prop69="D=v75",s.linkTrackVars+=",prop29,eVar75,prop69,",linkName="chat:egain-trackMetrics:"+linkName)}catch(e){}try{s.prop30=eventDetail.secondParam.target_click_event,s.linkTrackVars+=",prop30,"}catch(e){}switch(eventDetail.firstParam){case"new.download":linkType="d";case"new.exit":linkType="e";case"new.link":s.events=_satellite.getVar("aa:events:link")([],linkName),s.linkTrackVars+=",events",s.linkTrackEvents=s.events,s.tl(this,linkType,linkName);break;default:s.events=_satellite.getVar("aa:events:page"),s.pageName=s.channel+":"+screenName,s.t()}
 });</script><script>_satellite["_runScript8"](function(event, target, Promise) {
 try{s.tl(this,"o","egain-proactive-displayed:invite-show",digitalData.page.chat.egain.customer_type)}catch(t){}
-});</script></body></html>
+});</script></body>
+</html>
